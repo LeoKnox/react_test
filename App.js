@@ -1,15 +1,16 @@
 import "./styles.css";
 
 export default function App() {
-  const [someData, setSomeData] = ([]);
+  const someData = [];
+  const [data, setData] = ([]);
 
-  function submitForm() {
-    console.log(someData);
+  function submitForm(e) {
+    someData.append(e.target.value);
   }
 
   const changeData = (e) => {
-    setSomeData(e.target.value);
-  }
+    someData.append(e.target.value);
+  };
 
   return (
     <div className="App">
