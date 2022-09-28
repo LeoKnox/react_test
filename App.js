@@ -1,9 +1,10 @@
 import "./styles.css";
 
 export default function App() {
-  const [someData, setSomeDate] = ([]);
-  
-  function submitForm() {
+  const [someData, setSomeData] = ([]);
+
+  function submitForm(e) {
+    setSomeData(e.target.value);
     console.log("red");
   }
 
