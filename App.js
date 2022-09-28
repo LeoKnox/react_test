@@ -8,6 +8,10 @@ export default function App() {
     console.log("red");
   }
 
+  const changeData = (e) => {
+    setSomeData(e.target.value);
+  }
+
   return (
     <div className="App">
       <h1>Hello CodeSandbox</h1>
