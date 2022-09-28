@@ -1,5 +1,5 @@
 import "./styles.css";
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 export default function App() {
   const someData = [];
@@ -7,6 +7,7 @@ export default function App() {
 
   function submitForm() {
     someData.append(setData);
+    console.log(data);
   }
 
   const changeData = (e) => {
