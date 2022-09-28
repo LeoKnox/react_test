@@ -4,12 +4,12 @@ export default function App() {
   const someData = [];
   const [data, setData] = ([]);
 
-  function submitForm(e) {
-    someData.append(e.target.value);
+  function submitForm() {
+    someData.append(setData);
   }
 
   const changeData = (e) => {
-    someData.append(e.target.value);
+    setData(e.target.value);
   };
 
   return (
