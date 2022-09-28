@@ -1,8 +1,9 @@
 import "./styles.css";
+import { useEffect } from 'react';
 
 export default function App() {
   const someData = [];
-  const [data, setData] = ([]);
+  const [data, setData] = useEffect([]);
 
   function submitForm() {
     someData.append(setData);
