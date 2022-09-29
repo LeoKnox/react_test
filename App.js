@@ -3,11 +3,13 @@ import { useState } from "react";
 
 export default function App() {
   let someData = [];
+  const [x, setX] = useState([]);
   const [data, setData] = useState([]);
 
   function submitForm() {
     console.log("***"+data);
     someData.append(data);
+    setX(...x, data);
     console.log(someData);
   }
 
