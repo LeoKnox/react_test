@@ -1,9 +1,9 @@
 import "./styles.css";
-import { useEffect } from "react";
+import { useState } from "react";
 
 export default function App() {
-  const someData = [];
-  const [data, setData] = useEffect([]);
+  let someData = [];
+  const [data, setData] = useState([]);
 
   function submitForm() {
     someData.append(setData);
@@ -18,7 +18,7 @@ export default function App() {
     <div className="App">
       <h1>Hello CodeSandbox</h1>
       <form onSubmit={submitForm}>
-        <input type="text" onChange={changeData} value={someData} />
+        <input type="text" onChange={changeData} value={data} />
         <input type="submit" value="submit" />
       </form>
     </div>
