@@ -6,8 +6,9 @@ export default function App() {
   const [data, setData] = useState([]);
 
   function submitForm() {
-    someData.append(setData);
-    console.log(data);
+    console.log("***"+data);
+    someData.append(data);
+    console.log(someData);
   }
 
   const changeData = (e) => {
@@ -17,6 +18,11 @@ export default function App() {
   return (
     <div className="App">
       <h1>Hello CodeSandbox</h1>
+      {someData.map((mydata, index) => (
+        <>
+          <p>:{mydata}</p>
+        </>
+      ))}
       <form onSubmit={submitForm}>
         <input type="text" onChange={changeData} value={data} />
         <input type="submit" value="submit" />
