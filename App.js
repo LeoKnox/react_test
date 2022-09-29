@@ -1,16 +1,18 @@
 import "./styles.css";
-import { useState } from "react";
+import { useState, ReactDOM } from "react";
 
 export default function App() {
   let someData = [];
   const [x, setX] = useState([]);
   const [data, setData] = useState([]);
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  const element = (<p>trust</p>);
 
   function submitForm() {
-    console.log("***"+data);
     someData.append(data);
     setX(...x, data);
-    console.log(someData);
+    root.render(element);
+    console.log("!!!"+x);
   }
 
   const changeData = (e) => {
