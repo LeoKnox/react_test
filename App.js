@@ -20,7 +20,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>Hello CodeSandbox</h1>
-      {someData.map((mydata, index) => (
+      {x.map((mydata, index) => (
         <>
           <p>:{mydata}</p>
         </>
