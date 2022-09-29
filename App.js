@@ -5,13 +5,18 @@ export default function App() {
   let someData = [];
   const [x, setX] = useState([]);
   const [data, setData] = useState([]);
-  const root = ReactDOM.createRoot(document.getElementById('root'));
-  const element = (<p>trust</p>);
+
+  function newComp() {
+    return (
+      <>
+        <p>return</p>
+      </>
+    )
+  }
 
   function submitForm() {
     someData.append(data);
     setX(...x, data);
-    root.render(element);
     console.log("!!!"+x);
   }
 
@@ -31,6 +36,7 @@ export default function App() {
         <input type="text" onChange={changeData} value={data} />
         <input type="submit" value="submit" />
       </form>
+      {newComp}
     </div>
   );
 }
