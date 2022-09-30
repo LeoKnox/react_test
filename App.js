@@ -12,7 +12,8 @@ export default function App() {
 
   function submitForm() {
     someData.append(data);
-    setX([...x, data]);
+    let y=[...x, data];
+    setX(y);
     console.log("!!!"+x);
   }
 
