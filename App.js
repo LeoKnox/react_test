@@ -6,11 +6,9 @@ export default function App() {
   const [x, setX] = useState([]);
   const [data, setData] = useState([]);
 
-  const newComp = () => {
-    return (
+  const newComp = (
       <p>return</p>
-    )
-  }
+  )
 
   function submitForm() {
     someData.append(data);
@@ -34,7 +32,7 @@ export default function App() {
         <input type="text" onChange={changeData} value={data} />
         <input type="submit" value="submit" />
       </form>
-      <newComp />
+      {newComp}
     </div>
   );
 }
