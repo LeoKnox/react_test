@@ -12,7 +12,7 @@ export default function App() {
 
   function submitForm() {
     someData.append(data);
-    setX(...x, data);
+    setX([...x, data]);
     console.log("!!!"+x);
   }
 
@@ -25,7 +25,7 @@ export default function App() {
       <h1>Hello CodeSandbox</h1>
       {x.map((mydata, index) => (
         <>
-          <p>{x[0]}:{mydata}</p>
+          <p>{mydata}</p>
         </>
       ))}
       <form onSubmit={submitForm}>
