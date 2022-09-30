@@ -26,7 +26,7 @@ export default function App() {
       <h1>Hello CodeSandbox</h1>
       {x.map((mydata, index) => (
         <>
-          <p>{mydata}</p>
+          <p key={index}>{mydata}</p>
         </>
       ))}
       <form onSubmit={submitForm}>
